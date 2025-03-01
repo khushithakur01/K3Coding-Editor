@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animation Website</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+     <style>body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #282c34;
+        margin: 0;
+        overflow: hidden;
+    }
+    
+    .animation-container {
+        perspective: 1000px;
+    }
+    
+    .cube {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite linear;
+    }
+    
+    .cube div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid #000;
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: rotateX(0) rotateY(0);
+        }
+        to {
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }</style>
+</head>
+<body>
+    <div class="animation-container">
+        <div class="cube"></div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+     <script>document.querySelector('.animation-container').addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+    
+        document.querySelector('.cube').style.transform = `rotateX(${y * 360}deg) rotateY(${x * 360}deg)`;
+    });</script>
+</body>
+</html>

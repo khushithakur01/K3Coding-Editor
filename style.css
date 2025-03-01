@@ -1,0 +1,136 @@
+/* 🔹 General Page Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, #ff00ff, #ff0099, #330066, #000000); /* Neon Purple-Pink */
+    font-family: "Poppins", sans-serif;
+    color: #F8FAFC; /* Soft White */
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* 🔹 Main Container */
+#container {
+    height: 100%;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 🔹 Output iframe */
+#iframe {
+    border: 3px solid #00FFEA; /* Neon Cyan */
+    background: rgba(0, 0, 0, 0.8); /* Transparent Dark */
+    height: 50%;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 234, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 Editor Section */
+#editors {
+    border: 3px solid #ff00ff; /* Neon Pink */
+    position: relative;
+    background: rgba(0, 0, 0, 0.9); /* Deep Dark */
+    height: 50%;
+    width: 100%;
+}
+
+/* 🔹 Code Editor Styling */
+.editor {
+    border: 2px solid #00FFEA; /* Neon Cyan */
+    position: absolute;
+    top: 8%;
+    height: 90%;
+    width: 32%;
+    background: rgba(0, 0, 0, 0.7); /* Transparent Dark */
+    color: #E0F2FE; /* Soft Cyan */
+    border-radius: 12px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 234, 0.6);
+}
+
+.editor:hover {
+    border-color: #FF0099; /* Bright Pink */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 153, 0.7);
+}
+
+/* 🔹 Editor Positions */
+#htmlEditor {  
+    left: 2%;  
+}
+#cssEditor {
+    left: 34%;
+}
+#jsEditor {
+    right: 2%;
+}
+
+/* 🔹 Labels */
+#labels {
+    position: absolute;
+    top: 0%;
+    height: 8%;
+    width: 32%;
+    text-align: center;
+}
+
+/* 🔹 Label Colors */
+.htmlLabel {
+    left: 1%;
+    color: #FACC15; /* Bright Yellow */
+}
+.cssLabel {
+    left: 34%;
+    color: #00FFEA; /* Neon Cyan */
+}
+.jsLabel {
+    right: 1%;
+    color: #FF0099; /* Neon Pink */
+}
+
+/* 🔹 Buttons */
+.button {
+    background: linear-gradient(90deg, #FF0099, #00FFEA); /* Pink-Cyan Gradient */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 0, 153, 0.6);
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #00FFEA, #FF0099);
+    transform: scale(1.15);
+    box-shadow: 0 0 25px rgba(255, 0, 153, 0.9);
+}
+
+/* 🔹 Min, Max, and Download Buttons */
+.minButton {
+    position: absolute;
+    left: 0%;
+}
+
+.downloadCode {
+    position: absolute;
+    left: 0%;
+}
+
+.maxButton {
+    position: absolute;
+    right: 0%;
+}
